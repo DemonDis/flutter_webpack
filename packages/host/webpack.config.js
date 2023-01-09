@@ -9,7 +9,7 @@ module.exports = (env, arg) => ({
   entry: './src/index.js',
 
   output: {
-    publicPath: env.hasOwnProperty('WEBPACK_SERVE') ? 'http://localhost:9001/' : '/host/',
+    publicPath: 'auto',
   },
 
   resolve: {
@@ -20,7 +20,7 @@ module.exports = (env, arg) => ({
   },
 
   devServer: {
-    port: 9001,
+    port: 9000,
     historyApiFallback: true,
     headers: {'Access-Control-Allow-Origin': '*'}
   },
@@ -57,23 +57,19 @@ module.exports = (env, arg) => ({
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
-        /* Example remotes
-          components: `components@{env.hasOwnProperty('WEBPACK_SERVE') ? 'http://localhost:3001' : '/components'}/remoteEntry.js`,
-        */
+        flutter: `flutter@http://localhost:5001/remoteEntry.js`,
       },
       exposes: {
-        /* Example exposes
-          './Button': './src/components/Button.jsx',
-        */
+        
       },
       shared: {
         ...deps,
         react: {
-          singleton: true,
+          // singleton: true,
           requiredVersion: deps.react,
         },
         'react-dom': {
-          singleton: true,
+          // singleton: true,
           requiredVersion: deps['react-dom'],
         },
       },

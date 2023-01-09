@@ -2,7 +2,7 @@
   "name": "host",
   "version": "1.0.0",
   "scripts": {
-    "build": "node git.js && webpack --mode production",
+    "build": "webpack --mode production",
     "start": "webpack serve --open --mode development"
   },
   "license": "MIT",
