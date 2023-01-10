@@ -1,11 +1,15 @@
 # flutter_webpack
-
-https://docs.flutter.dev/get-started/web
-
+```
+flutter create . --platforms=web
+```
 ```
  flutter run -d chrome
 ```
-
 ```
- flutter build web
+ flutter clean
+```
+https://docs.flutter.dev/get-started/web
+https://docs.flutter.dev/development/platform-integration/web/renderers
+```
+ flutter run -d chrome --web-renderer html --profile
 ```
