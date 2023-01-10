@@ -14,9 +14,6 @@ module.exports = (env, arg) => ({
 
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
   },
 
   devServer: {
