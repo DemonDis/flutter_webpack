@@ -8,8 +8,8 @@ flutter create . --platforms=web
 ```
  flutter clean
 ```
-https://docs.flutter.dev/get-started/web
-https://docs.flutter.dev/development/platform-integration/web/renderers
+  1. https://docs.flutter.dev/get-started/web
+  2. https://docs.flutter.dev/development/platform-integration/web/renderers
 ```
  flutter run -d chrome --web-renderer html --profile
 ```
